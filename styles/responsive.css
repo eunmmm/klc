@@ -1,0 +1,35 @@
+/*반응형 화면 크기*/
+/* $mobile: 768px;
+$tablet: 1024px;
+$desktop1: 1600px;
+$desktop2: 1330px; */
+
+@media (max-width: 1640px) {
+  .wrap {
+    max-width: 100% !important;
+    margin: 0 4% !important;
+  }
+
+  /* nav */
+
+  .sub_nav_container {
+    padding: 0 220px;
+  }
+
+  .sub_nav_list_group > li {
+    margin-right: 18px;
+  }
+  .sub_nav_list_group > li > a {
+    padding: 24px 15px 27px;
+  }
+
+  .quick_wrap_inner {
+    margin: 0 -70px;
+  }
+
+  /* consulting */
+
+  .sc_consulting .text_wrap .inner h3 {
+    font-size: 35px;
+  }
+}

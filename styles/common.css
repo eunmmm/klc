@@ -1,0 +1,106 @@
+.blind {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.btn_normal {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: center;
+  padding: 24px 10px;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: border 300ms, background 300ms, color 300ms;
+  transition: border 300ms, background 300ms, color 300ms;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  font-family: "Play", "NotoSansKR", sans-serif;
+}
+.btn_normal:hover {
+  background: #fff;
+  color: #1f2c5c;
+}
+
+.btn_normal span.arrow {
+  font-weight: 600;
+  -webkit-transition: padding 300ms, margin 300ms;
+  transition: padding 300ms, margin 300ms;
+  position: relative;
+  padding-right: 0;
+}
+.btn_normal:hover span.arrow {
+  margin-left: -10px;
+  padding-right: 10px;
+  color: #1f2c5c;
+}
+.btn_normal span.arrow::after {
+  font-family: "jt-font";
+  content: "\e92b";
+  color: #fff;
+  font-size: 13px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 200ms, right 200ms;
+  transition: opacity 200ms, right 200ms;
+}
+.btn_normal:hover span.arrow::after {
+  opacity: 1;
+  right: -15px;
+  color: #1f2c5c;
+}
+
+.btn_arrow {
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+}
+.btn_arrow::before {
+  font-family: "jt-font";
+  content: "\e903";
+  color: #fff;
+  font-size: 31px;
+  display: block;
+}
+
+.arrow::after {
+  font-family: "jt-font";
+  content: "\e92b";
+  color: #fff;
+  font-size: 13px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 200ms, right 200ms;
+  transition: opacity 200ms, right 200ms;
+}
+
+@media (max-width: 1024px) {
+  .btn_normal {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn_normal {
+    padding: 16px 5px 16px;
+    width: 170px;
+    max-width: 153px;
+  }
+}
