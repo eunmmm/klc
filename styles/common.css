@@ -103,4 +103,8 @@
     width: 170px;
     max-width: 153px;
   }
+  .btn_normal:hover {
+    background: inherit;
+    color: #fff;
+  }
 }

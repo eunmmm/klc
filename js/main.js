@@ -59,7 +59,16 @@ $(function () {
       $(".nav_bg").stop().slideDown();
       $(".sub_nav_container_outer").stop().slideDown();
 
+      $("#header").addClass("active");
+      $(".header_wrap .logo").addClass("active");
+      $("#nav > li > a").addClass("active");
+      $(".btn_insights_wrap .btn_insights").addClass("active");
+      $(".smart_link_wrap").addClass("active");
+      $(".btn_search").addClass("active");
+      $(".btn_smart_link").addClass("active");
+
       $(this).find(".sub_nav_container_outer").addClass("on");
+      $(this).addClass("active");
 
       $(".sub_nav_container").removeClass("active");
       $(this).find(".sub_nav_container").addClass("active");
@@ -79,6 +88,14 @@ $(function () {
       $(".sub_nav_container_outer").stop().slideUp();
       $(".nav_bg").stop().slideUp();
       $(".sub_nav_container_outer").removeClass("on");
+      $("#header").removeClass("active");
+      $(".header_wrap .logo").removeClass("active");
+      $("#nav > li > a").removeClass("active");
+      $(".btn_insights_wrap .btn_insights").removeClass("active");
+      $(".smart_link_wrap").removeClass("active");
+      $(".btn_search").removeClass("active");
+      $(".btn_smart_link").removeClass("active");
+      $(this).removeClass("active");
     }
   );
 
@@ -533,11 +550,6 @@ $(function () {
     $(this).toggleClass("on").siblings().toggleClass("on");
   });
 
-  // address btn
-  // $(".m_footer_mark_btn").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass("on").siblings().children().toggleClass("on");
-  // });
   $(".m_footer_mark_btn").on("click", function (e) {
     $(".mark").slideToggle(function () {
       $.fn.fullpage.reBuild();
